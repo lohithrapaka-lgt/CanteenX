@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    CanteenX Menu Document Type Definition (DTD)
+    WT Syllabus Concept: XML Document Type Definition (DTD) Validation
+-->
+<!ELEMENT canteenMenu (info, categoryList)>
+<!ATTLIST canteenMenu 
+    canteenName CDATA #REQUIRED
+    generatedDate CDATA #REQUIRED
+    xmlns CDATA #IMPLIED
+    xmlns:xsi CDATA #IMPLIED
+    xsi:schemaLocation CDATA #IMPLIED>
+
+<!ELEMENT info (college, timing, notice)>
+<!ELEMENT college (#PCDATA)>
+<!ELEMENT timing (#PCDATA)>
+<!ELEMENT notice (#PCDATA)>
+
+<!ELEMENT categoryList (category+)>
+<!ELEMENT category (categoryName, items)>
+<!ATTLIST category id CDATA #REQUIRED>
+
+<!ELEMENT categoryName (#PCDATA)>
+<!ELEMENT items (foodItem*)>
+
+<!ELEMENT foodItem (name, description, price, isAvailable)>
+<!ATTLIST foodItem id CDATA #REQUIRED>
+
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+<!ELEMENT isAvailable (#PCDATA)>

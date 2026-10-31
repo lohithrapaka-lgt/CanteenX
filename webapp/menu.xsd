@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    CanteenX Menu XML Schema (XSD)
+    WT Syllabus Concept: XML Schema Definition (XSD) with Elements, Attributes, and Data Types
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.canteenx.com/menu"
+           xmlns="http://www.canteenx.com/menu"
+           elementFormDefault="qualified">
+
+    <!-- Root Element -->
+    <xs:element name="canteenMenu">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="info" type="InfoType"/>
+                <xs:element name="categoryList" type="CategoryListType"/>
+            </xs:sequence>
+            <xs:attribute name="canteenName" type="xs:string" use="required"/>
+            <xs:attribute name="generatedDate" type="xs:date" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Info Section Type -->
+    <xs:complexType name="InfoType">
+        <xs:sequence>
+            <xs:element name="college" type="xs:string"/>
+            <xs:element name="timing" type="xs:string"/>
+            <xs:element name="notice" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Category List Type -->
+    <xs:complexType name="CategoryListType">
+        <xs:sequence>
+            <xs:element name="category" type="CategoryType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Category Type -->
+    <xs:complexType name="CategoryType">
+        <xs:sequence>
+            <xs:element name="categoryName" type="xs:string"/>
+            <xs:element name="items" type="ItemsType"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
+    </xs:complexType>
+
+    <!-- Items Type -->
+    <xs:complexType name="ItemsType">
+        <xs:sequence>
+            <xs:element name="foodItem" type="FoodItemType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Food Item Type -->
+    <xs:complexType name="FoodItemType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="description" type="xs:string"/>
+            <xs:element name="price" type="PriceType"/>
+            <xs:element name="isAvailable" type="xs:boolean"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
+    </xs:complexType>
+
+    <!-- Custom Price Type with positive decimal restriction -->
+    <xs:simpleType name="PriceType">
+        <xs:restriction base="xs:decimal">
+            <xs:minExclusive value="0.00"/>
+            <xs:maxInclusive value="5000.00"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>

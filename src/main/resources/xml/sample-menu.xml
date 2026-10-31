@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    CanteenX Sample Menu XML
+    WT Syllabus Concepts: Well-formed and Valid XML, DTD reference, XSD Namespace
+-->
+<!DOCTYPE canteenMenu SYSTEM "menu.dtd">
+<canteenMenu xmlns="http://www.canteenx.com/menu"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.canteenx.com/menu menu.xsd"
+             canteenName="CanteenX Central Campus"
+             generatedDate="2026-10-04">
+
+    <info>
+        <college>Engineering &amp; Technology Campus</college>
+        <timing>08:00 AM - 08:00 PM</timing>
+        <notice>Online orders must be collected within 20 minutes of READY status notification.</notice>
+    </info>
+
+    <categoryList>
+        <category id="1">
+            <categoryName>Breakfast</categoryName>
+            <items>
+                <foodItem id="1">
+                    <name>Masala Dosa</name>
+                    <description>Crispy fermented crepe filled with spiced potato masala, served with sambar &amp; chutney</description>
+                    <price>50.00</price>
+                    <isAvailable>true</isAvailable>
+                </foodItem>
+                <foodItem id="2">
+                    <name>Idli Vada Combo</name>
+                    <description>2 steamed fluffy rice cakes and 1 crispy medu vada served with coconut chutney and hot sambar</description>
+                    <price>40.00</price>
+                    <isAvailable>true</isAvailable>
+                </foodItem>
+                <foodItem id="3">
+                    <name>Poha with Sev</name>
+                    <description>Flattened rice tempered with mustard seeds, curry leaves, onions, and topped with crunchy sev</description>
+                    <price>30.00</price>
+                    <isAvailable>true</isAvailable>
+                </foodItem>
+            </items>
+        </category>
+
+        <category id="2">
+            <categoryName>Meals &amp; Thali</categoryName>
+            <items>
+                <foodItem id="4">
+                    <name>Special Veg Thali</name>
+                    <description>2 Roti, Paneer Butter Masala, Dal Tadka, Jeera Rice, Salad, Pickle, and Sweet</description>
+                    <price>110.00</price>
+                    <isAvailable>true</isAvailable>
+                </foodItem>
+                <foodItem id="5">
+                    <name>Paneer Fried Rice</name>
+                    <description>Aromatic wok-tossed basmati rice with golden paneer cubes and crunchy vegetables</description>
+                    <price>90.00</price>
+                    <isAvailable>true</isAvailable>
+                </foodItem>
+                <foodItem id="6">
+                    <name>Chole Bhature (2 Pcs)</name>
+                    <description>Spicy and tangy chickpea curry served with two puffy deep-fried leavened bhature</description>
+                    <price>80.00</price>
+                    <isAvailable>true</isAvailable>
+                </foodItem>
+            </items>
+        </category>
+
+        <category id="3">
+            <categoryName>Quick Snacks</categoryName>
+            <items>
+                <foodItem id="7">
+                    <name>Aloo Samosa (2 Pcs)</name>
+                    <description>Golden triangular pastries stuffed with spiced potatoes and peas, served with mint chutney</description>
+                    <price>25.00</price>
+                    <isAvailable>true</isAvailable>
+                </foodItem>
+                <foodItem id="8">
+                    <name>Grilled Cheese Sandwich</name>
+                    <description>Toasted bread filled with seasoned vegetables, mozzarella, and cheddar cheese</description>
+                    <price>45.00</price>
+                    <isAvailable>true</isAvailable>
+                </foodItem>
+            </items>
+        </category>
+
+        <category id="4">
+            <categoryName>Beverages</categoryName>
+            <items>
+                <foodItem id="10">
+                    <name>Kulhad Masala Chai</name>
+                    <description>Rich, aromatic milk tea brewed with cardamom, ginger, and cloves, served in traditional clay cup</description>
+                    <price>15.00</price>
+                    <isAvailable>true</isAvailable>
+                </foodItem>
+                <foodItem id="11">
+                    <name>Cold Coffee with Ice Cream</name>
+                    <description>Thick creamy blended cold coffee topped with a scoop of vanilla ice cream</description>
+                    <price>55.00</price>
+                    <isAvailable>true</isAvailable>
+                </foodItem>
+            </items>
+        </category>
+    </categoryList>
+</canteenMenu>
