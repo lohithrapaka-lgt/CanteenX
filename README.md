@@ -136,10 +136,3 @@ http://localhost:8080/CanteenX/
 
 Developed as a college web technology project.
 
-
-![Admin Dashboard](screenshots/06-admin-dashboard.png)
-
-### 7. Admin Order Management
-Administrators can view incoming orders, filter them by status, and manage the order lifecycle from placement to completion.
-
-![Admin Order Management](screenshots/07-admin-order-management.png)
